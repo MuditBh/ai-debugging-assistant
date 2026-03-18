@@ -3,7 +3,7 @@
 ## 🚀 Overview
 AI Debugging Assistant is a semantic search-based system that helps developers quickly identify and resolve programming errors.
 
-Instead of relying on keyword matching, this system understands the meaning of error messages using vector embeddings and retrieves the most relevant solutions.
+Unlike traditional keyword-based search, this system understands the meaning of error messages using vector embeddings and retrieves the most relevant solutions.
 
 ---
 
@@ -54,7 +54,7 @@ This project is designed with a modular vector database layer that is compatible
 Currently, FAISS is used for local development and fast similarity search.  
 A lightweight Endee client layer is implemented to simulate vector storage and retrieval.
 
-This demonstrates how the system can be seamlessly migrated to Endee for scalable, production-grade deployment.
+This demonstrates how semantic search systems can be seamlessly migrated from FAISS to scalable vector databases like Endee for production-grade deployment.
 
 ---
 
@@ -75,14 +75,20 @@ ai-debugging-assistant/
 ## ▶️ Setup Instructions
 
 ### 1. Clone the repository
+```bash
 git clone https://github.com/MuditBh/ai-debugging-assistant  
 cd ai-debugging-assistant  
+```
 
 ### 2. Install dependencies
+```bash
 pip install -r requirements.txt  
+```
 
 ### 3. Run the application
+```bash
 streamlit run ui.py  
+```
 
 ---
 
@@ -102,6 +108,11 @@ Solution: Check for null before accessing object
 - FAISS enables fast similarity search in high-dimensional vector space  
 - Embeddings capture semantic meaning instead of exact keywords  
 - Architecture supports migration to scalable vector databases like Endee  
+
+---
+
+## 🧠 Real-World Use Case
+This system helps developers debug errors faster by providing context-aware solutions, reducing dependency on manual search and improving productivity.
 
 ---
 
