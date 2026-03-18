@@ -32,16 +32,17 @@ if query:
 
     seen = set()
 
-    for r in results:
-        error_text = r["metadata"]["error"]
-        solution_text = r["metadata"]["solution"]
+    for result in results:
+        error_text = result["error"]
+        solution_text = result["solution"]
 
-        # 🚫 skip duplicates
+        # 🚫 Skip duplicates
         if error_text in seen:
-           continue
+            continue
 
         seen.add(error_text)
 
-        st.markdown(f"❌ **Error:** {error_text}")
-        st.markdown(f"✅ **Solution:** {solution_text}")
-        st.markdown("---")
+        st.write(f"🔹 Score: {result['score']:.2f}")
+        st.write(f"❌ Error: {error_text}")
+        st.write(f"✅ Solution: {solution_text}")
+        st.write("---")
